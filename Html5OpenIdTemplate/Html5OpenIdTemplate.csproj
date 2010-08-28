@@ -71,7 +71,7 @@
     <Content Include="css\handheld.css" />
     <Content Include="css\openid.css" />
     <Content Include="css\style.css" />
-    <Content Include="demo\elements-demo.html" />
+    <Content Include="demo\elements.html" />
     <Content Include="Depends\DotNetOpenAuth.dll" />
     <Content Include="Global.asax" />
     <Content Include="img\aol.gif" />

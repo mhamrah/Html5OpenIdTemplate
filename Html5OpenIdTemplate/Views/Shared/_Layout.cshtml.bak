@@ -1,3 +1,5 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
@@ -8,9 +10,9 @@
 
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
        Remove this if you use the .htaccess -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 
-  <title></title>
+  <title>@View.Title</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -29,16 +31,17 @@
 
 
   <!-- CSS : implied media="all" -->
-  <link rel="stylesheet" href="css/style.css?v=1">
+  <link rel="stylesheet" href="@Url.Content("~/css/style.css?v=1")">
 
   <!-- For the less-enabled mobile browsers like Opera Mini -->
-  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=1">
+  <link rel="stylesheet" media="handheld" href="@Url.Content("~/css/handheld.css?v=1")">
 
  
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <script src="js/modernizr-1.5.min.js"></script>
-
-</head>
+  <script src="@Url.Content("~/js/modernizr-1.5.min.js")"></script>
+  
+  @RenderSection( "HeadContent", optional : true)
+  </head>
 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 
@@ -46,15 +49,18 @@
 <!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
 <!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
 <!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+<!--[if gt IE 9]>  <body>             <![endif]-->
+<!--[if !IE]><!--> <body>         <!--<![endif]-->
+
+
 
   <div id="container">
     <header>
-
+      @Html.Partial("_LogOnPartial")
     </header>
     
     <div id="main">
-
+      @RenderBody()
     </div>
     
     <footer>
@@ -67,20 +73,20 @@
 
   <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-  <script>!window.jQuery && document.write('<script src="js/jquery-1.4.2.min.js"><\/script>')</script>
+  <script>!window.jQuery && document.write('<script src="@Url.Content("~/js/jquery-1.4.2.min.js")"><\/script>')</script>
 
+  <script src="@Url.Content("~/js/plugins.js?v=1")"></script>
+  <script src="@Url.Content("~/js/script.js?v=1")"></script>
 
-  <script src="js/plugins.js?v=1"></script>
-  <script src="js/script.js?v=1"></script>
-
+  @RenderSection( "ScriptSection", optional : true)
   <!--[if lt IE 7 ]>
     <script src="js/dd_belatedpng.js?v=1"></script>
   <![endif]-->
 
 
   <!-- yui profiler and profileviewer - remove for production -->
-  <script src="js/profiling/yahoo-profiling.min.js?v=1"></script>
-  <script src="js/profiling/config.js?v=1"></script>
+  <script src="@Url.Content("~/js/profiling/yahoo-profiling.min.js?v=1")"></script>
+  <script src="@Url.Content("~/js/profiling/config.js?v=1")"></script>
   <!-- end profiling code -->
 
 
@@ -99,3 +105,6 @@
   
 </body>
 </html>
+
+
+
