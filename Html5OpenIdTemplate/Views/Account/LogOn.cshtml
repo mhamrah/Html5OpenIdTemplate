@@ -1,8 +1,5 @@
-﻿@inherits System.Web.Mvc.WebViewPage
-
-@{
+﻿@{
 	View.Title = "Log On";
-	LayoutPage = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section HeadContent
@@ -13,7 +10,7 @@
 
 @section ScriptSection
 {
-	<script type="text/javascript" src="@Url.Content("~/js/openid-jquery.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/js/libs/openid-jquery.js")"></script>
 	<script type="text/javascript">
 	$(document).ready(function() {
 		openid.init('openid_identifier');

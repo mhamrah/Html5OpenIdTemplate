@@ -35,6 +35,9 @@
   <ItemGroup>
     <Reference Include="DotNetOpenAuth, Version=3.4.5.10202, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages" />
+    <Reference Include="System.Web.Helpers" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -44,7 +47,6 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -63,17 +65,21 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Views\_ViewStart.cshtml" />
     <None Include="Views\Account\_OpenId.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="404.html" />
+    <Content Include="apple-touch-icon.png" />
     <Content Include="crossdomain.xml" />
     <Content Include="css\handheld.css" />
     <Content Include="css\openid.css" />
     <Content Include="css\style.css" />
     <Content Include="demo\elements.html" />
     <Content Include="Depends\DotNetOpenAuth.dll" />
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Html5.index.html" />
     <Content Include="img\aol.gif" />
     <Content Include="img\blogger.ico" />
     <Content Include="img\claimid.ico" />
@@ -89,35 +95,43 @@
     <Content Include="img\vidoop.ico" />
     <Content Include="img\wordpress.ico" />
     <Content Include="img\yahoo.gif" />
-    <Content Include="Html5.Base.html" />
-    <Content Include="js\dd_belatedpng.js" />
-    <Content Include="js\jquery-1.4.2.min.js" />
-    <Content Include="js\modernizr-1.5.min.js" />
-    <Content Include="js\openid-jquery.js" />
+    <Content Include="js\config.js" />
+    <Content Include="js\libs\dd_belatedpng.js" />
+    <Content Include="js\libs\jquery-1.4.2.js" />
+    <Content Include="js\libs\jquery-1.4.2.min-vsdoc.js" />
+    <Content Include="js\libs\jquery-1.4.2.min.js" />
+    <Content Include="js\libs\jquery.unobtrusive-ajax.js" />
+    <Content Include="js\libs\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="js\libs\jquery.validate-vsdoc.js" />
+    <Content Include="js\libs\jquery.validate.js" />
+    <Content Include="js\libs\jquery.validate.min.js" />
+    <Content Include="js\libs\jquery.validate.unobtrusive.js" />
+    <Content Include="js\libs\jquery.validate.unobtrusive.min.js" />
+    <Content Include="js\libs\modernizr-1.6.min.js" />
+    <Content Include="js\libs\openid-jquery.js" />
     <Content Include="js\plugins.js" />
     <Content Include="js\profiling\charts.swf" />
     <Content Include="js\profiling\config.js" />
     <Content Include="js\profiling\yahoo-profiling.css" />
     <Content Include="js\profiling\yahoo-profiling.min.js" />
-    <Content Include="js\script.js" />
     <Content Include="robots.txt" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="js\jquery-1.4.2.min-vsdoc.js" />
-    <Content Include="js\jquery.validate.js" />
-    <Content Include="js\jquery.validate.min.js" />
-    <Content Include="js\jquery.validate-vsdoc.js" />
     <Content Include="Views\Account\LogOn.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LogOnPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

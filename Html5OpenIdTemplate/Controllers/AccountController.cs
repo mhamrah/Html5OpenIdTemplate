@@ -11,9 +11,9 @@ using DotNetOpenAuth.OpenId;
 using DotNetOpenAuth.Messaging;
 using DotNetOpenAuth.OpenId.RelyingParty;
 using System.Net;
-using $safeprojectname$.Models;
+using AppBase.Models;
 
-namespace $safeprojectname$.Controllers
+namespace AppBase.Controllers
 {
     public class AccountController : Controller
     {
