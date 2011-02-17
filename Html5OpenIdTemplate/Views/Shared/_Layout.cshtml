@@ -1,11 +1,10 @@
 ﻿<!doctype html>  
 
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ --> 
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7 ]> <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
 
@@ -13,7 +12,7 @@
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>@View.Title</title>
+  <title>@ViewBag.Title</title>
   <meta name="description" content="">
   <meta name="author" content="">
   
@@ -45,7 +44,7 @@
       @Html.Partial("_LogOnPartial")
     </header>
     
-    <div id="main">
+    <div id="main" role="main">
       @RenderBody()
     </div>
     
@@ -58,8 +57,8 @@
   <!-- Javascript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="@Url.Content("~/js/libs/jquery-1.4.2.min.js")"%3E%3C/script%3E'))</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="@Url.Content("~/js/libs/jquery-1.5.0.min.js")"%3E%3C/script%3E'))</script>
 
   <script src="@Url.Content("~/js/plugins.js?v=1")"></script>
   <script src="@Url.Content("~/js/script.js?v=1")"></script>
@@ -68,31 +67,17 @@
   @RenderSection( "ScriptSection", false)
   <!--[if lt IE 7 ]>
     <script src="js/libs/dd_belatedpng.js"></script>
-    <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+    <script>DD_belatedPNG.fix('img, .png_bg'); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
   <![endif]-->
 
 
-  <!-- yui profiler and profileviewer - remove for production -->
-  <script src="@Url.Content("~/js/profiling/yahoo-profiling.min.js?v=1")"></script>
-  <script src="@Url.Content("~/js/profiling/config.js?v=1")"></script>
-  <!-- end profiling code -->
-
-
-  <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet 
-       change the UA-XXXXX-X to be your site's ID -->
+  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
   <script>
-      var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
-      (function (d, t) {
-          var g = d.createElement(t),
-        s = d.getElementsByTagName(t)[0];
-          g.async = true;
-          g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          s.parentNode.insertBefore(g, s);
-      })(document, 'script');
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
   </script>
   
 </body>
 </html>
-
-
-

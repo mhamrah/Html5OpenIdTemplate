@@ -198,19 +198,25 @@
 					<dt>Hack 15 - PNG fix</dt>
 					<dd>fix pngs for correct display in IE6
 					  <br /> <br />
-					  
-					  <div style="position:relative">
-					    
-					    <!-- wassup gradient. -->
-					    <div style="position:absolute; height: 40px; background-color: #444444; background-image: -moz-linear-gradient(top, #444444, #999999);  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #444444),color-stop(1, #999999));  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#444444', EndColorStr='#999999');  ">
-					      
-					      
-  					  <div class="png_bg" style="border:1px solid #ddd; width:100px; padding:10px 10px 10px 50px;  display:inline-block; background:url(test_tubes.png) no-repeat 5px center;">
-                <img src="internet_explorer.png" alt="IE is so awesome" />
-              </div>
-            </div>
-					  
-					</dd>	
+
+					<div style="position:relative">
+						
+						<!-- wassup gradient. -->
+						<div style="
+							position:absolute; height: 40px; background-color: #444444; background-image: -moz-linear-gradient(top, #444444, #999999);
+							background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #444444),color-stop(1, #999999));
+							filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#444444', EndColorStr='#999999');
+						">
+						  
+							<div class="png_bg" style="
+								border:1px solid #ddd; width:100px; padding:10px 10px 10px 50px;
+								display:inline-block; background:url(test_tubes.png) no-repeat 5px center;
+							">
+								<img src="internet_explorer.png" alt="IE is so awesome" />
+							</div>
+						</div>
+					</div>					  
+				</dd>	
 			</dl>
     </div>
     <footer>
@@ -222,8 +228,8 @@
   <!-- Javascript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="../js/libs/jquery-1.4.2.js"%3E%3C/script%3E'))</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="../js/libs/jquery-1.5.0.js"%3E%3C/script%3E'))</script>
 
 
   <script>
@@ -262,10 +268,10 @@
 		var linkTags = $('link');
 		function hideStyle() {
 		  // tee hee
-			$('link[href*=style.css]').attr('media','braille');
+			$('link[href*="style.css"]').attr('media','braille');
 		}
 		function showStyle() {
-			$('link[href*=style.css]').attr('media','all');
+			$('link[href*="style.css"]').attr('media','all');
 		}
 		
 		$('.preventDefault').click(function() {
@@ -288,11 +294,6 @@
     <script src="../js/libs/dd_belatedpng.js"></script>
     <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
   <![endif]-->
-
-  <!-- yui profiler and profileviewer - remove for production -->
-  <script src="../js/profiling/yahoo-profiling.min.js"></script>
-  <script src="../js/profiling/config.js"></script>
-  <!-- end profiling code -->
 
 
   <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet 

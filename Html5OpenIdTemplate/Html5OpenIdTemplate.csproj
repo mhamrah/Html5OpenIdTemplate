@@ -76,6 +76,11 @@
     <Content Include="css\openid.css" />
     <Content Include="css\style.css" />
     <Content Include="demo\elements.html" />
+    <Content Include="demo\hack.css" />
+    <Content Include="demo\hack2.css" />
+    <Content Include="demo\internet_explorer.png" />
+    <Content Include="demo\tests.html" />
+    <Content Include="demo\test_tubes.png" />
     <Content Include="Depends\DotNetOpenAuth.dll" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -95,11 +100,10 @@
     <Content Include="img\vidoop.ico" />
     <Content Include="img\wordpress.ico" />
     <Content Include="img\yahoo.gif" />
-    <Content Include="js\config.js" />
     <Content Include="js\libs\dd_belatedpng.js" />
-    <Content Include="js\libs\jquery-1.4.2.js" />
-    <Content Include="js\libs\jquery-1.4.2.min-vsdoc.js" />
-    <Content Include="js\libs\jquery-1.4.2.min.js" />
+    <Content Include="js\libs\jquery-1.5.0-vsdoc.js" />
+    <Content Include="js\libs\jquery-1.5.0.js" />
+    <Content Include="js\libs\jquery-1.5.0.min.js" />
     <Content Include="js\libs\jquery.unobtrusive-ajax.js" />
     <Content Include="js\libs\jquery.unobtrusive-ajax.min.js" />
     <Content Include="js\libs\jquery.validate-vsdoc.js" />
@@ -110,10 +114,7 @@
     <Content Include="js\libs\modernizr-1.6.min.js" />
     <Content Include="js\libs\openid-jquery.js" />
     <Content Include="js\plugins.js" />
-    <Content Include="js\profiling\charts.swf" />
-    <Content Include="js\profiling\config.js" />
-    <Content Include="js\profiling\yahoo-profiling.css" />
-    <Content Include="js\profiling\yahoo-profiling.min.js" />
+    <Content Include="js\script.js" />
     <Content Include="robots.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

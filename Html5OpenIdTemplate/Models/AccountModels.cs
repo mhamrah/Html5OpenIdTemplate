@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 
-namespace AppBase.Models
+namespace $safeprojectname$.Models
 {
 
  

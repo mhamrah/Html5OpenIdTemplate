@@ -1,4 +1,4 @@
-﻿/// <reference path="jquery-1.4.1.js" />
+﻿/// <reference path="jquery-1.4.4.js" />
 /// <reference path="jquery.validate.js" />
 
 /*!
@@ -156,6 +156,8 @@
                 }
             });
 
+            jQuery.extend(rules, { "__dummy__": true });
+
             if (!skipAttach) {
                 valInfo.attachValidation();
             }
@@ -262,6 +264,10 @@
         });
     };
 
+    $jQval.addMethod("__dummy__", function (value, element, params) {
+        return true;
+    });
+
     $jQval.addMethod("regex", function (value, element, params) {
         var match;
         if (this.optional(element)) {
@@ -289,7 +295,7 @@
             setValidationValues(options, "required", true);
         }
     });
-    adapters.add("remote", ["url", "type", "fields"], function (options) {
+    adapters.add("remote", ["url", "type", "additionalfields"], function (options) {
         var value = {
             url: options.params.url,
             type: options.params.type || "GET",
@@ -297,7 +303,7 @@
         },
             prefix = getModelPrefix(options.element.name);
 
-        $.each(splitAndTrim(options.params.fields || options.element.name), function (i, fieldName) {
+        $.each(splitAndTrim(options.params.additionalfields || options.element.name), function (i, fieldName) {
             var paramName = appendModelPrefix(fieldName, prefix);
             value.data[paramName] = function () {
                 return $(options.form).find(":input[name='" + paramName + "']").val();
