@@ -34,8 +34,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetOpenAuth, Version=3.4.5.10202, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL" />
+    <Reference Include="DotNetOpenAuth">
+      <HintPath>..\packages\DotNetOpenAuth.3.4.6.10357\lib\DotNetOpenAuth.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Samples.ImageOptimizationFramework">
+      <HintPath>..\packages\AspNetSprites-Core.0.3\lib\Microsoft.Web.Samples.ImageOptimizationFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Samples.SpriteHelper">
+      <HintPath>..\packages\AspNetSprites-MvcAndRazorHelper.0.3\lib\Microsoft.Web.Samples.SpriteHelper.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages" />
     <Reference Include="System.Web.Helpers" />
@@ -70,8 +78,10 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="App_Sprites\README.txt" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\MyAccount.cshtml" />
+    <Content Include="packages.config" />
     <None Include="Views\Account\_OpenId.cshtml" />
   </ItemGroup>
   <ItemGroup>
