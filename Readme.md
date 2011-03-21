@@ -21,7 +21,7 @@ You can download the VS Project Template [here](https://github.com/downloads/mha
 
 ### Changelog
 
-* Mar. 21, 2011: Now with Twitter and Facebook sign in support, jQuery 1.5.1 and 
+* Mar. 21, 2011: Now with Twitter and Facebook sign in support, jQuery 1.5.1 and the latest Boilerplate code.
 * Feb 17, 2011: Upgraded to latest MVC 3 Release and Html5 Boilerplate master branch.  Fixed compilation issues with latest MVC 3 release.  Updated template .zip.
 * Nov. 15, 2010: Updated to use MVC 3 RC and Html5 Boilerplate v.0.9.5.  Also integrates certain parts of web.config file from Boilerplate.
 
