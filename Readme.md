@@ -2,6 +2,8 @@
 
 AppBase is a starting point for ASP.NET MVC3 Projects leveraging HTML5 Boilerplate [http://html5boilerplate.com](http://html5boilerplate.com) and Open Authentication with OpenId and OAuth.  You can authenticate with Twitter and Facebook using OAuth.  The goal of AppBase is to provide a slim-down MVC 3 site with OpenId/OAuth Authentication for you to build 
 
+
+You can download the VS Project Template [here](https://github.com/downloads/mhamrah/Html5OpenIdTemplate/Html5-MVC3-BP-OpenAuth.zip)
 **Features**
 
 * Uses [DotNetOpenAuth](http://www.dotnetopenauth.net/) OAuth 2 CTP for Facebook support 

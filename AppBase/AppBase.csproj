@@ -93,6 +93,10 @@
     <Content Include="img\auth\twitter_64.png" />
     <Content Include="img\auth\wordpress_32.png" />
     <Content Include="img\auth\yahoo_64.png" />
+    <Content Include="js\libs\jquery-1.5.1-vsdoc.js" />
+    <Content Include="js\libs\jquery-1.5.1.js" />
+    <Content Include="js\libs\jquery-1.5.1.min.js" />
+    <Content Include="js\libs\modernizr-1.7.min.js" />
     <Content Include="js\mylibs\.gitignore" />
     <Content Include="js\mylibs\openid-jquery.js" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -115,17 +119,9 @@
     <Content Include="demo\test_tubes.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="img\auth\blogger.ico" />
-    <Content Include="img\auth\flickr.ico" />
-    <Content Include="img\auth\myopenid.ico" />
     <Content Include="img\auth\openid-inputicon.gif" />
     <Content Include="img\auth\openid.gif" />
-    <Content Include="img\auth\technorati.ico" />
-    <Content Include="img\auth\wordpress.ico" />
     <Content Include="js\libs\dd_belatedpng.js" />
-    <Content Include="js\libs\jquery-1.5.0-vsdoc.js" />
-    <Content Include="js\libs\jquery-1.5.0.js" />
-    <Content Include="js\libs\jquery-1.5.0.min.js" />
     <Content Include="js\libs\jquery.unobtrusive-ajax.js" />
     <Content Include="js\libs\jquery.unobtrusive-ajax.min.js" />
     <Content Include="js\libs\jquery.validate-vsdoc.js" />
@@ -133,8 +129,6 @@
     <Content Include="js\libs\jquery.validate.min.js" />
     <Content Include="js\libs\jquery.validate.unobtrusive.js" />
     <Content Include="js\libs\jquery.validate.unobtrusive.min.js" />
-    <Content Include="js\libs\modernizr-1.6.min.js" />
-    <Content Include="js\libs\openid-jquery.js" />
     <Content Include="js\plugins.js" />
     <Content Include="js\script.js" />
     <Content Include="robots.txt" />
