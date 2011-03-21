@@ -4,6 +4,7 @@ AppBase is a starting point for ASP.NET MVC3 Projects leveraging HTML5 Boilerpla
 
 
 You can download the VS Project Template [here](https://github.com/downloads/mhamrah/Html5OpenIdTemplate/Html5-MVC3-BP-OpenAuth.zip)
+
 **Features**
 
 * Uses [DotNetOpenAuth](http://www.dotnetopenauth.net/) OAuth 2 CTP for Facebook support 
