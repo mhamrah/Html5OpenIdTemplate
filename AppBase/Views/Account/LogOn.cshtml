@@ -1,0 +1,21 @@
+﻿@{
+	ViewBag.Title = "Log On";
+}
+
+@section HeadContent
+{
+	<link rel="stylesheet" href="@Url.Content("~/css/openid.css")" />
+}
+
+@section ScriptSection
+{
+	<script type="text/javascript" src="@Url.Content("~/js/mylibs/openid-jquery.js")"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		openid.init('openid_identifier');
+	});
+	</script>
+}
+
+
+@Html.Partial("_OpenId")
