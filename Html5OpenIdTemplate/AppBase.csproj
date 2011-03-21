@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenIdTemplate</RootNamespace>
-    <AssemblyName>OpenIdTemplate</AssemblyName>
+    <RootNamespace>AppBase</RootNamespace>
+    <AssemblyName>AppBase</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
@@ -34,8 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetOpenAuth, Version=3.5.0.10357, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DotNetOpenAuth">
       <HintPath>..\packages\DotNetOpenAuth\DotNetOpenAuth.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
