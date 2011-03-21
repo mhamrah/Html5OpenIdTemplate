@@ -99,6 +99,7 @@
     <Content Include="js\libs\modernizr-1.7.min.js" />
     <Content Include="js\mylibs\.gitignore" />
     <Content Include="js\mylibs\openid-jquery.js" />
+    <Content Include="readme.txt" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\MyAccount.cshtml" />
     <None Include="html5-bp.README.md" />
