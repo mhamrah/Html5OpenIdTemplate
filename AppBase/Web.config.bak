@@ -4,7 +4,7 @@
   http://go.microsoft.com/fwlink/?LinkId=152368
   -->
 <!-- web.config contributed to html5boilerplate by Velir : velir.com -->
-<!-- web.config merged into Html4AppBase by mhamrah -->
+<!-- web.config merged into AppBase by mhamrah -->
 <configuration>
   <connectionStrings></connectionStrings>
   <appSettings>
