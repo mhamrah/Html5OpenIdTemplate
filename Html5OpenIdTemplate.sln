@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Html5OpenIdTemplate", "Html5OpenIdTemplate\Html5OpenIdTemplate.csproj", "{5DEBECC9-422A-4E49-9448-0EEE76CC2B53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppBase", "Html5OpenIdTemplate\AppBase.csproj", "{5DEBECC9-422A-4E49-9448-0EEE76CC2B53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

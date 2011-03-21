@@ -34,8 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetOpenAuth">
-      <HintPath>..\packages\DotNetOpenAuth.3.4.6.10357\lib\DotNetOpenAuth.dll</HintPath>
+    <Reference Include="DotNetOpenAuth, Version=3.5.0.10357, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth\DotNetOpenAuth.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Samples.ImageOptimizationFramework">
@@ -44,6 +45,7 @@
     <Reference Include="Microsoft.Web.Samples.SpriteHelper">
       <HintPath>..\packages\AspNetSprites-MvcAndRazorHelper.0.3\lib\Microsoft.Web.Samples.SpriteHelper.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages" />
     <Reference Include="System.Web.Helpers" />
@@ -67,7 +69,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\Auth\Facebook.cs" />
+    <Compile Include="App\Auth\FacebookUtil.cs" />
+    <Compile Include="App\Auth\IOAuthClient.cs" />
     <Compile Include="App\Auth\OpenId.cs" />
+    <Compile Include="App\Auth\OpenIdentity.cs" />
     <Compile Include="App\Auth\TokenManager.cs" />
     <Compile Include="App\Auth\Twitter.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -79,6 +85,16 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="App_Sprites\README.txt" />
+    <Content Include="img\auth\aol_64.png" />
+    <Content Include="img\auth\blogger_32.png" />
+    <Content Include="img\auth\facebook_64.png" />
+    <Content Include="img\auth\flickr_32.png" />
+    <Content Include="img\auth\google_apps_64.png" />
+    <Content Include="img\auth\open_id_64.png" />
+    <Content Include="img\auth\technorati_32.png" />
+    <Content Include="img\auth\twitter_64.png" />
+    <Content Include="img\auth\wordpress_32.png" />
+    <Content Include="img\auth\yahoo_64.png" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\MyAccount.cshtml" />
     <Content Include="packages.config" />
@@ -97,25 +113,16 @@
     <Content Include="demo\internet_explorer.png" />
     <Content Include="demo\tests.html" />
     <Content Include="demo\test_tubes.png" />
-    <Content Include="Depends\DotNetOpenAuth.dll" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Html5.index.html" />
-    <Content Include="img\aol.gif" />
-    <Content Include="img\blogger.ico" />
-    <Content Include="img\claimid.ico" />
-    <Content Include="img\facebook.gif" />
-    <Content Include="img\flickr.ico" />
-    <Content Include="img\google.gif" />
-    <Content Include="img\livejournal.ico" />
-    <Content Include="img\myopenid.ico" />
-    <Content Include="img\openid-inputicon.gif" />
-    <Content Include="img\openid.gif" />
-    <Content Include="img\technorati.ico" />
-    <Content Include="img\verisign.ico" />
-    <Content Include="img\vidoop.ico" />
-    <Content Include="img\wordpress.ico" />
-    <Content Include="img\yahoo.gif" />
+    <Content Include="img\auth\blogger.ico" />
+    <Content Include="img\auth\flickr.ico" />
+    <Content Include="img\auth\myopenid.ico" />
+    <Content Include="img\auth\openid-inputicon.gif" />
+    <Content Include="img\auth\openid.gif" />
+    <Content Include="img\auth\technorati.ico" />
+    <Content Include="img\auth\wordpress.ico" />
     <Content Include="js\libs\dd_belatedpng.js" />
     <Content Include="js\libs\jquery-1.5.0-vsdoc.js" />
     <Content Include="js\libs\jquery-1.5.0.js" />
@@ -152,7 +159,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="img\auth\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Html5.README.markdown" />

@@ -25,20 +25,19 @@ namespace AppBase.App.Auth
             _openIdRelyingParty = relyingParty ?? new OpenIdRelyingParty();
         }
 
-        public ActionResult ProcessOpenId(string openId)
+        public OpenIdentity ProcessOpenId(string openId)
         {
             _response = _openIdRelyingParty.GetResponse();
 
             if (_response == null)
             {
                 Authenticate(openId);
+                return null;
             }
-            else
-            {
-                Verify();
-            }
+         
+              return Verify();
 
-            return new EmptyResult();
+          
         }
 
         public void Authenticate(string openId)
@@ -54,14 +53,15 @@ namespace AppBase.App.Auth
             }
         }
 
-        public string Verify()
+        public OpenIdentity Verify()
         {
-            string retVal = null;
+            var oid = new OpenIdentity();
 
             switch (_response.Status)
             {
                 case AuthenticationStatus.Authenticated:
-                    retVal = _response.ClaimedIdentifier;
+                    oid.Id = _response.ClaimedIdentifier;
+                    oid.Username = _response.FriendlyIdentifierForDisplay;
                     break;
                 case AuthenticationStatus.Canceled:
                     throw new ApplicationException("Canceled at Provider");
@@ -69,7 +69,7 @@ namespace AppBase.App.Auth
                     throw new ApplicationException(_response.Exception.Message);
             }
 
-            return retVal;
+            return oid;
         }
     }
 }

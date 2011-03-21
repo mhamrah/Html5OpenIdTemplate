@@ -1,25 +1,27 @@
-﻿<form action="@Url.Action("Authenticate", "Account")" method="post" id="openid_form">
+﻿<form action="@Url.Action("OpenId", "Auth")" method="post" id="openid_form">
 <input type="hidden" name="action" value="verify" />
 <fieldset>
     <legend>Sign-in or Create New Account</legend>
-    <div id="openid_choice">
-        <p>
-            Please click your account provider:</p>
-        <div id="openid_btns">
-        </div>
+    <div id="primary_buttons">
+        <a href="/auth/facebook" alt="facebook"><img alt="facebook" src="/img/auth/facebook_64.png" /></a>
+        <a href="/auth/twitter" alt="twitter"><img alt="twitter" src="/img/auth/twitter_64.png" /></a>
+        <a href="/auth/yahoo" alt="yahoo"><img alt="yahoo" src="/img/auth/yahoo_64.png" /></a>
+        <a href="/auth/google" alt="google"><img alt="google" src="/img/auth/google_apps_64.png" /></a>
+        <a class="oid aol" data-url="http://openid.aol.com/{username}/" data-label="Enter your AOL screenname." alt="aol" href="#"><img alt="aol" src="/img/auth/aol_64.png" /></a>
+        <a class="oid openid" data-url="" data-label="Enter your OpenID." alt="openid" href="#"><img alt="aol" src="/img/auth/open_id_64.png" /></a>
     </div>
+    <div id="secondary_buttons>
+         <a class="oid flickr" data-url="http://flickr.com/{username}/" data-label="Enter your Flickr username." alt="flickr" href="#"><img alt="" src="/img/auth/flickr_32.png" /></a>
+         <a class="oid Technorati" data-url="http://technorati.com/people/technorati/{username}/" data-label="Enter your Technorati username." alt="oid" href="#"><img alt="" src="/img/auth/technorati_32.png" /></a>
+         <a class="oid Wordpress" data-url="http://{username}.wordpress.com/" data-label="Enter your Wordpress.com username." alt="oid" href="#"><img alt="" src="/img/auth/wordpress_32.png" /></a>
+         <a class="oid Blogger" data-url="http://{username}.blogspot.com/" data-label="http://{username}.blogspot.com/" alt="oid" href="#"><img alt="" src="/img/auth/blogger_32.png" /></a>
+
+    </div>
+    
     <div id="openid_input_area">
-        <input id="openid_identifier" name="openid_identifier" type="text" value="http://" />
-        <input id="openid_submit" type="submit" value="Sign-In" />
+
     </div>
-    <a href="/auth/facebook" alt="facebook">
-        <img alt="facebook" src="/img/auth/facebook_64.png" /></a>
-    <a href="/auth/twitter" alt="twitter">
-        <img alt="twitter" src="/img/auth/twitter_64.png" /></a>
-    <a href="/auth/yahoo" alt="yahoo">
-        <img alt="yahoo" src="/img/auth/yahoo_64.png" /></a>
-    <a href="/auth/google" alt="google">
-        <img alt="google" src="/img/auth/google_64.png" /></a>
+           <input type="hidden" id="openid_identifier" name="openid_identifier" />
     <noscript>
         <p>
             OpenID is service that allows you to log-on to many different websites using a single

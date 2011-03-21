@@ -6,14 +6,14 @@ using System.Web;
 using DotNetOpenAuth.Messaging;
 using DotNetOpenAuth.OAuth;
 using DotNetOpenAuth.OAuth.ChannelElements;
-using OpenIdTemplate.App.Auth;
-using OpenIdTemplate.Controllers;
+using AppBase.App.Auth;
+using AppBase.Controllers;
 
 namespace AppBase.App.Auth
 {
-    public class Twitter
+    public class Twitter : IOauthClient
     {
-        private ServiceProviderDescription GetServiceProviderDescription()
+        private  ServiceProviderDescription GetServiceProviderDescription()
         {
             return new ServiceProviderDescription
             {
@@ -24,7 +24,7 @@ namespace AppBase.App.Auth
             };
         }
 
-        private IConsumerTokenManager GetTokenManager()
+        private  IConsumerTokenManager GetTokenManager()
         {
             var store = System.Web.HttpContext.Current.Session;
                 var tokenManager = (InMemoryTokenManager)store["TwitterShortTermUserSessionTokenManager"];
@@ -40,14 +40,16 @@ namespace AppBase.App.Auth
 
                 return tokenManager;
         }
-        private WebConsumer GetConsumer()
+        private  WebConsumer GetConsumer()
         {
             return new WebConsumer(GetServiceProviderDescription(), GetTokenManager());
         }
-        public void Authenticate(Uri callback)
+        public  void Authenticate(Uri callback)
         {
             var redirectParameters = new Dictionary<string, string>();
-            //   redirectParameters["force_login"] = "true";
+            
+            //Uncomment this if you always want the user to sign into Twitter
+            //redirectParameters["force_login"] = "true";
 
             var twitter = GetConsumer();
 
@@ -57,7 +59,7 @@ namespace AppBase.App.Auth
 
         }
 
-        public string Verify()
+        public  OpenIdentity Verify()
         {
             var twitter = GetConsumer();
 
@@ -67,9 +69,10 @@ namespace AppBase.App.Auth
                 return null;
 
             var screenName = response.ExtraData["screen_name"];
-            var userId = int.Parse(response.ExtraData["user_id"]);
+            var userId = response.ExtraData["user_id"];
 
-            return screenName;
+            return new OpenIdentity() {Id = userId, Username = screenName, SiteProvider = "Twitter"};
+        
         }
     }
 }

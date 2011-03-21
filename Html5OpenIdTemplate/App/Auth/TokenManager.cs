@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using DotNetOpenAuth.OAuth.ChannelElements;
 
-namespace OpenIdTemplate.App.Auth
+namespace AppBase.App.Auth
 {
     public class InMemoryTokenManager : IConsumerTokenManager
     {
